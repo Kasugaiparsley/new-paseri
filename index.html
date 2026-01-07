@@ -1,133 +1,155 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>春日井パセリーズ｜野球サークル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    /* メインカラーを緑に変更（#0d8f3c）。全体を落ち着いた緑基調のデザインにしています。 */
     body {
-      font-family: "Helvetica Neue", sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f0f2f5;
-      color: #333;
-      line-height: 1.6;
+      font-family: "Helvetica Neue", sans-serif;
+      background: #ffffff;
+      color: #222;
     }
 
+    /* --- ヘッダー --- */
     header {
-      background: #2c3e50;
+      position: sticky;
+      top: 0;
+      background: #08db4bf3;
       color: white;
-      padding: 1.5em 2em;
-      text-align: center;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
     header h1 {
       margin: 0;
-      font-size: 1.8em;
-    }
-    nav {
-      margin-top: 0.5em;
+      font-size: 1.4em;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     nav a {
-      color: #f1f1f1;
+      color: white;
       text-decoration: none;
-      margin: 0 0.5em;
+      margin-left: 1em;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+
+    /* --- トップ画像 --- */
+    .hero {
+      width: 100%;
+      height: 380px;
+      background: url("paseri1.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+    }
+    .hero-text {
+      background: rgba(0,0,0,0.55);
+      color: white;
+      padding: 1.2em 2em;
+      font-size: 1.8em;
+      font-weight: bold;
     }
 
+    /* --- セクション共通 --- */
     section {
-      background: white;
-      margin: 2em auto;
-      padding: 1.5em 2em;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 1000px;
+      margin: 2.5em auto;
+      padding: 0 1.5em;
     }
     section h2 {
-      color: #2c3e50;
-      border-left: 6px solid #27ae60;
-      padding-left: 0.5em;
+      border-left: 6px solid #08db4bf3;
+      padding-left: 0.6em;
       margin-bottom: 1em;
+      font-size: 1.6em;
     }
 
-    ul { list-style: none; padding: 0; }
-    li { margin: 0.4em 0; }
+    /* --- メンバー大学 --- */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
+    /* --- ギャラリー --- */
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
     }
     .gallery img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
+    /* --- 活動記録カード風 --- */
+    .log-card {
+      background: #fafafa;
+      padding: 1em 1.5em;
+      border-left: 4px solid #08db4bf3;
+      margin-bottom: 0.8em;
+      border-radius: 6px;
+    }
+
+    /* --- お問い合わせフォーム --- */
     form input, form textarea {
       width: 100%;
       padding: 0.7em;
-      margin-top: 0.3em;
+      margin-top: 0.4em;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 1em;
     }
     form button {
       margin-top: 1em;
       padding: 0.7em 1.5em;
       border: none;
       border-radius: 8px;
-      background: #27ae60;
+      background: #08db4bf3;
       color: white;
       font-size: 1em;
       cursor: pointer;
-      transition: background 0.3s;
-    }
-    form button:hover {
-      background: #219150;
     }
 
+    /* --- フッター --- */
     footer {
       text-align: center;
-      background: #2c3e50;
+      background: #08db4bf3;
       color: #eee;
-      padding: 1em 0;
-      margin-top: 2em;
+      padding: 1.2em 0;
+      margin-top: 3em;
     }
   </style>
 </head>
 <body>
+    <!-- このページはレッドクルーザーズ風のデザインをベースに、メインカラーを緑へ変更したバージョンです -->
   <header>
-    <h1>春日井パセリーズ｜野球サークル</h1>
+    <h1>春日井パセリーズ</h1>
     <nav>
-      <a href="#about">紹介</a> |
-      <a href="#members">メンバー</a> |
-      <a href="#recruit">メンバー募集</a> |
-      <a href="#place">活動場所</a> |
-      <a href="#photos">写真</a> |
-      <a href="#logs">活動記録</a> |
-      <a href="#contact">お問い合わせ</a> |
-      <a href="https://www.instagram.com/kasugai_parsley?igsh=MTY0bnhhNzM1bWVrNQ==" target="_blank">Instagram</a>
+      <a href="#about">紹介</a>
+      <a href="#members">メンバー</a>
+      <a href="#recruit">募集</a>
+      <a href="#place">場所</a>
+      <a href="#photos">写真</a>
+      <a href="#logs">記録</a>
+      <a href="#contact">お問い合わせ</a>
     </nav>
   </header>
 
-  <!-- サークル紹介 -->
+  <div class="hero">
+    <div class="hero-text">春日井パセリーズ｜野球サークル</div>
+  </div>
+
   <section id="about">
-    <h2>春日井パセリーズ</h2>
-    <p>⚾️ 野球でつながる、春日井の仲間</p>
-    <p>こんにちは！春日井市で活動している野球サークルです。<br>
-       経験者も初心者もみんなで野球を楽しみながら交流しています！</p>
+    <h2>サークル紹介</h2>
+    <p>春日井市で活動している野球サークルです。経験者も初心者も参加でき、楽しく成長できる環境をつくっています。</p>
   </section>
 
   <section id="members">
     <h2>メンバーの大学</h2>
-    <ul>   
+    <ul>
       <li>南山大学</li>
       <li>中部大学</li>
       <li>中京大学</li>
@@ -136,80 +158,52 @@
     </ul>
   </section>
 
-  <!-- メンバー募集 -->
   <section id="recruit">
     <h2>メンバー募集</h2>
-    <p>春日井パセリーズは、野球を通じて仲間づくりや交流を楽しむことを目的に活動しています。<br>
-       月2〜3回の練習や交流戦、観戦会も開催しています。<br>
-       <strong>初心者も大歓迎です！</strong></p>
+    <p>初心者・経験者ともに歓迎!月2〜3回の練習と試合を中心に活動しています。</p>
   </section>
 
   <section id="place">
     <h2>活動場所</h2>
-    <p>牛山グラウンド<br>〒486-0901 愛知県春日井市牛山町</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.4578333467693!2d136.9667104760951!3d35.244864153821055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003721aeec6c7e9%3A0xe3c5fd991da24552!2z5Lit5aSu5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1764376116652!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-      width="100%" height="400" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+    <p>春日井市 中央公園<br>〒486-0844 愛知県春日井市鳥居松町３丁目</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.4578333467693!2d136.9667104760951!3d35.244864153821055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003721aeec6c7e9%3A0xe3c5fd991da24552!2z5Lit5aSu5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1764376116652!5m2!1sja!2sjp" width="100%" height="380" style="border:0; border-radius: 12px;" loading="lazy"></iframe>
   </section>
 
   <section id="photos">
     <h2>写真</h2>
     <div class="gallery">
-      <img src="kasugai1.jpg" alt="集合写真">
-      <img src="syasin1.jpg" alt="活動写真1">
-      <img src="syasin2.jpg" alt="活動写真2">
+      <img src="kasugai1.jpg" alt="集合写真" />
+      <img src="syasin1.jpg" alt="活動写真1" />
+      <img src="syasin2.jpg" alt="活動写真2" />
     </div>
   </section>
 
   <section id="logs">
     <h2>活動記録</h2>
-    <ul>
-      <li><strong>2025-08-26</strong> </li>
-      <li><strong>2025-09-29</strong>練習</li>
-      <li><strong>2025-10-3</strong>練習</li>
-      <li><strong>2025-10-4</strong>集合写真撮影</li>
-      <li><strong></strong></li>
-    </ul>
+    <div class="log-card"><strong>2025-10-4</strong> 集合写真撮影</div>
+    <div class="log-card"><strong>2025-10-3</strong> 練習</div>
+    <div class="log-card"><strong>2025-09-29</strong> 練習</div>
+    <div class="log-card"><strong>2025-08-26</strong> 活動日</div>
   </section>
-
-  <section id="instagram">
-    <h2>Instagram</h2>
-    <blockquote class="instagram-media" 
-      data-instgrm-permalink="https://www.instagram.com/p/DO98y9-kg95/?igsh=MTJ1NXRsbGYwbzMwNg==" 
-      data-instgrm-version="14"
-      style="background:#fff; border:0; margin: 1em auto; max-width:540px; width:calc(100% - 2em); padding:0;">
-    </blockquote>
-    <script async src="https://www.instagram.com/embed.js"></script>
-  </section>
-
-
 
   <section id="contact">
     <h2>お問い合わせ</h2>
     <form action="https://formspree.io/f/xnngqpel" method="POST">
-      <label>お名前:<br>
-        <input type="text" name="name" required>
-      </label><br><br>
-
-      <label>メールアドレス:<br>
-        <input type="email" name="_replyto" required>
-      </label><br><br>
-
-      <label>メッセージ:<br>
+      <label>お名前
+        <input type="text" name="name" required />
+      </label>
+      <label>メールアドレス
+        <input type="email" name="_replyto" required />
+      </label>
+      <label>メッセージ
         <textarea name="message" rows="5" required></textarea>
-      </label><br><br>
-
+      </label>
       <button type="submit">送信</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2025 春日井パセリーズ</p>
+    © 2025 春日井パセリーズ
   </footer>
 </body>
 </html>
-
-
-
-
-
